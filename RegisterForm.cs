@@ -67,7 +67,11 @@ namespace just_pl
             db.openConnection();
 
             if (command.ExecuteNonQuery() == 1)
-                MessageBox.Show("Yes account");
+            {
+                this.Hide();
+                Launcher launcher = new Launcher(); 
+                launcher.Show();
+            }
             else
                 MessageBox.Show("No account");
 

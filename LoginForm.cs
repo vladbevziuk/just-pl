@@ -54,7 +54,9 @@ namespace just_pl
 
             if (table.Rows.Count > 0)
             {
-                MessageBox.Show("yes");
+                this.Hide();
+                Launcher launcher = new Launcher();
+                launcher.Show();
             }
             else
                 MessageBox.Show("no");
