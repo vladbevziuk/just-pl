@@ -16,7 +16,14 @@ namespace just_pl
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            SplashForm splashForm = new SplashForm();
+            splashForm.Show();
+            Application.DoEvents();
+            System.Threading.Thread.Sleep(5000);
+            LoginForm loginForm = new LoginForm(); 
+            splashForm.Close();
+            loginForm.Show();
+            Application.Run();
         }
     }
 }

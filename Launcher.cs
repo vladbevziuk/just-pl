@@ -25,5 +25,18 @@ namespace just_pl
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            info info = new info();
+            info.Show();
+        }
     }
 }

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace just_pl
 {
@@ -17,6 +18,7 @@ namespace just_pl
         public LoginForm()
         {
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -30,7 +32,6 @@ namespace just_pl
             int x = (screenWidth - windowWidth) / 2;
             int y = (screenHeight - windowHeight) / 2;
             this.Location = new Point(x, y);
-
         }
 
         private void buttonlogin_Click(object sender, EventArgs e)
@@ -44,7 +45,7 @@ namespace just_pl
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL AND `pass` = @uP", db.getConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL AND `password` = @uP", db.getConnection());
 
             command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = login;
             command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = pass;
@@ -59,7 +60,10 @@ namespace just_pl
                 launcher.Show();
             }
             else
-                MessageBox.Show("no");
+            {
+                loginbox.BorderColor = Color.Red;
+                passbox.BorderColor = Color.Red;
+            }
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -78,5 +82,6 @@ namespace just_pl
             RegisterForm registerForm = new RegisterForm();
             registerForm.Show();
         }
+
     }
 }

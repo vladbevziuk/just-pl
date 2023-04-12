@@ -37,12 +37,11 @@
             this.closeButton = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.logintext = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonregister = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.logintext = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -138,21 +137,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label2.Location = new System.Drawing.Point(437, 264);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 32);
+            this.label2.Size = new System.Drawing.Size(195, 32);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Login";
-            // 
-            // logintext
-            // 
-            this.logintext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.logintext.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.logintext.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.logintext.ForeColor = System.Drawing.SystemColors.Info;
-            this.logintext.Location = new System.Drawing.Point(443, 331);
-            this.logintext.Multiline = true;
-            this.logintext.Name = "logintext";
-            this.logintext.Size = new System.Drawing.Size(297, 36);
-            this.logintext.TabIndex = 4;
+            this.label2.Text = "Account name";
             // 
             // label3
             // 
@@ -165,18 +152,6 @@
             this.label3.Size = new System.Drawing.Size(138, 32);
             this.label3.TabIndex = 5;
             this.label3.Text = "Password";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Location = new System.Drawing.Point(443, 458);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(297, 34);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.UseSystemPasswordChar = true;
             // 
             // buttonregister
             // 
@@ -194,20 +169,6 @@
             this.buttonregister.UseVisualStyleBackColor = false;
             this.buttonregister.Click += new System.EventHandler(this.buttonregister_Click);
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.checkBox1.Location = new System.Drawing.Point(443, 528);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(141, 24);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "Remember me";
-            this.checkBox1.UseVisualStyleBackColor = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -222,18 +183,70 @@
             this.label4.Text = "Login";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // logintext
+            // 
+            this.logintext.BackColor = System.Drawing.SystemColors.Desktop;
+            this.logintext.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.logintext.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.logintext.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.logintext.DefaultText = "";
+            this.logintext.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.logintext.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.logintext.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.logintext.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.logintext.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.logintext.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.logintext.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.logintext.ForeColor = System.Drawing.Color.White;
+            this.logintext.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.logintext.Location = new System.Drawing.Point(443, 328);
+            this.logintext.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
+            this.logintext.Name = "logintext";
+            this.logintext.PasswordChar = '\0';
+            this.logintext.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.logintext.PlaceholderText = "";
+            this.logintext.SelectedText = "";
+            this.logintext.Size = new System.Drawing.Size(297, 48);
+            this.logintext.TabIndex = 14;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.textBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.textBox1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox1.DefaultText = "";
+            this.textBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.textBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox1.Location = new System.Drawing.Point(443, 449);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '●';
+            this.textBox1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.textBox1.PlaceholderText = "";
+            this.textBox1.SelectedText = "";
+            this.textBox1.Size = new System.Drawing.Size(297, 48);
+            this.textBox1.TabIndex = 15;
+            this.textBox1.UseSystemPasswordChar = true;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1247, 902);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.buttonregister);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.logintext);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.buttonregister);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -260,11 +273,10 @@
         private System.Windows.Forms.Label closeButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox logintext;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buttonregister;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2TextBox logintext;
+        private Guna.UI2.WinForms.Guna2TextBox textBox1;
     }
 }

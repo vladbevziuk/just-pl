@@ -45,12 +45,12 @@ namespace just_pl
         {
             if (logintext.Text == "")
             {
-                MessageBox.Show("Write login");
+                logintext.BorderColor = Color.Red;
                 return;
             }
             if(textBox1.Text == "")
             {
-                MessageBox.Show("Write password");
+                textBox1.BorderColor = Color.Red;
                 return;
             }
 
@@ -59,7 +59,7 @@ namespace just_pl
 
         
             Db db = new Db();
-            MySqlCommand command = new MySqlCommand("Insert INTO `users` (`login`, `pass`) VALUES (@login, @pass)", db.getConnection());
+            MySqlCommand command = new MySqlCommand("Insert INTO `users` (`login`, `password`) VALUES (@login, @pass)", db.getConnection());
 
             command.Parameters.Add("@login", MySqlDbType.VarChar).Value = logintext.Text;
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = textBox1.Text;
