@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,12 +44,12 @@ namespace just_pl
 
             DataTable table = new DataTable();
 
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            SqlDataAdapter adapter = new SqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL AND `password` = @uP", db.getConnection());
+            SqlCommand command = new SqlCommand("SELECT * FROM [just play] WHERE [login] = @uL AND [password] = @uP", db.getConnection());
 
-            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = login;
-            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = pass;
+            command.Parameters.Add("@uL", SqlDbType.VarChar).Value = login;
+            command.Parameters.Add("@uP", SqlDbType.VarChar).Value = pass;
 
             adapter.SelectCommand = command;
             adapter.Fill(table);

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -59,10 +60,10 @@ namespace just_pl
 
         
             Db db = new Db();
-            MySqlCommand command = new MySqlCommand("Insert INTO `users` (`login`, `password`) VALUES (@login, @pass)", db.getConnection());
+            SqlCommand command = new SqlCommand("Insert INTO just play (login, pass) VALUES (@login, @pass)", db.getConnection());
 
-            command.Parameters.Add("@login", MySqlDbType.VarChar).Value = logintext.Text;
-            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = textBox1.Text;
+            command.Parameters.Add("@login", SqlDbType.VarChar).Value = logintext.Text;
+            command.Parameters.Add("@pass", SqlDbType.VarChar).Value = textBox1.Text;
 
             db.openConnection();
 
@@ -86,7 +87,7 @@ namespace just_pl
 
             DataTable table = new DataTable();
 
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            SqlDataAdapter adapter = new SqlDataAdapter();
 
             MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL", db.getConnection());
 
