@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace just_pl
 {
@@ -37,6 +38,11 @@ namespace just_pl
         {
             info info = new info();
             info.Show();
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"Snake\Snake.exe");
         }
     }
 }
