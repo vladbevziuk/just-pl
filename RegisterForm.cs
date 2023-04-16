@@ -1,9 +1,8 @@
-﻿using Microsoft.Data.SqlClient;
-using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -60,7 +59,7 @@ namespace just_pl
 
         
             Db db = new Db();
-            SqlCommand command = new SqlCommand("Insert INTO just play (login, pass) VALUES (@login, @pass)", db.getConnection());
+            SqlCommand command = new SqlCommand("Insert INTO users (login, pass) VALUES (@login, @pass)", db.getConnection());
 
             command.Parameters.Add("@login", SqlDbType.VarChar).Value = logintext.Text;
             command.Parameters.Add("@pass", SqlDbType.VarChar).Value = textBox1.Text;
@@ -89,9 +88,9 @@ namespace just_pl
 
             SqlDataAdapter adapter = new SqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL", db.getConnection());
+            SqlCommand command = new SqlCommand("SELECT * FROM users WHERE login = @uL", db.getConnection());
 
-            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = logintext;
+            command.Parameters.Add("@uL", SqlDbType.VarChar).Value = logintext.Text;
 
             adapter.SelectCommand = command;
             adapter.Fill(table);

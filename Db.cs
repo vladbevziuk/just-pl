@@ -1,7 +1,6 @@
-﻿using Microsoft.Data.SqlClient;
-using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +9,7 @@ namespace just_pl
 {
     class Db
     {
-        SqlConnection con = new SqlConnection("Server=tcp:justplay.database.windows.net,1433;Initial Catalog=just play;Persist Security Info=False;User ID=vlad;Password=fgdzasdf;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        SqlConnection con = new SqlConnection(@"Data Source=justplay.database.windows.net;Initial Catalog=just_play;Persist Security Info=True;User ID=vlad;Password=Fgdzasdf1");
 
         public void openConnection()
         {

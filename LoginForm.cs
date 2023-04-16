@@ -1,9 +1,8 @@
-﻿using Microsoft.Data.SqlClient;
-using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
@@ -37,8 +36,8 @@ namespace just_pl
 
         private void buttonlogin_Click(object sender, EventArgs e)
         {
-            String login = loginbox.Text;
-            String pass = passbox.Text;
+            string login = loginbox.Text;
+            string pass = passbox.Text;
 
             Db db = new Db();
 
@@ -46,7 +45,7 @@ namespace just_pl
 
             SqlDataAdapter adapter = new SqlDataAdapter();
 
-            SqlCommand command = new SqlCommand("SELECT * FROM [just play] WHERE [login] = @uL AND [password] = @uP", db.getConnection());
+            SqlCommand command = new SqlCommand("SELECT * FROM users WHERE login = @uL AND pass = @uP", db.getConnection());
 
             command.Parameters.Add("@uL", SqlDbType.VarChar).Value = login;
             command.Parameters.Add("@uP", SqlDbType.VarChar).Value = pass;
