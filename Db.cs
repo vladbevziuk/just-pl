@@ -1,6 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +9,7 @@ namespace just_pl
 {
     class Db
     {
-        SqlConnection con = new SqlConnection(@"Data Source=justplay.database.windows.net;Initial Catalog=just_play;Persist Security Info=True;User ID=vlad;Password=Fgdzasdf1");
+        MySqlConnection con = new MySqlConnection("server = localhost; port = 3306; username = root; password = root; database = justpl");
 
         public void openConnection()
         {
@@ -21,7 +21,7 @@ namespace just_pl
             if (con.State == System.Data.ConnectionState.Open)
                 con.Close();   
         }
-        public SqlConnection getConnection()
+        public MySqlConnection getConnection()
         {
             return con;
         } 

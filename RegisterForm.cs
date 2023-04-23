@@ -1,8 +1,8 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -59,10 +59,10 @@ namespace just_pl
 
         
             Db db = new Db();
-            SqlCommand command = new SqlCommand("Insert INTO users (login, pass) VALUES (@login, @pass)", db.getConnection());
+            MySqlCommand command = new MySqlCommand("Insert INTO users (login, password) VALUES (@login, @pass)", db.getConnection());
 
-            command.Parameters.Add("@login", SqlDbType.VarChar).Value = logintext.Text;
-            command.Parameters.Add("@pass", SqlDbType.VarChar).Value = textBox1.Text;
+            command.Parameters.Add("@login", MySqlDbType.VarChar).Value = logintext.Text;
+            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = textBox1.Text;
 
             db.openConnection();
 
@@ -86,11 +86,11 @@ namespace just_pl
 
             DataTable table = new DataTable();
 
-            SqlDataAdapter adapter = new SqlDataAdapter();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            SqlCommand command = new SqlCommand("SELECT * FROM users WHERE login = @uL", db.getConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM users WHERE login = @uL", db.getConnection());
 
-            command.Parameters.Add("@uL", SqlDbType.VarChar).Value = logintext.Text;
+            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = logintext.Text;
 
             adapter.SelectCommand = command;
             adapter.Fill(table);

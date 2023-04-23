@@ -1,8 +1,8 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
@@ -43,12 +43,12 @@ namespace just_pl
 
             DataTable table = new DataTable();
 
-            SqlDataAdapter adapter = new SqlDataAdapter();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            SqlCommand command = new SqlCommand("SELECT * FROM users WHERE login = @uL AND pass = @uP", db.getConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM users WHERE login = @uL AND password = @uP", db.getConnection());
 
-            command.Parameters.Add("@uL", SqlDbType.VarChar).Value = login;
-            command.Parameters.Add("@uP", SqlDbType.VarChar).Value = pass;
+            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = login;
+            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = pass;
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
@@ -57,6 +57,7 @@ namespace just_pl
             {
                 this.Hide();
                 Launcher launcher = new Launcher();
+                launcher.Login = login;
                 launcher.Show();
             }
             else

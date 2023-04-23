@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.namelabel = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,7 +43,6 @@
             this.textBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,7 +57,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.namelabel);
             this.panel2.Controls.Add(this.closeButton);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
@@ -83,22 +80,12 @@
             this.label6.Text = "-";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(144, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // namelabel
             // 
             this.namelabel.AutoSize = true;
             this.namelabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.namelabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.namelabel.Location = new System.Drawing.Point(260, 34);
+            this.namelabel.Location = new System.Drawing.Point(155, 22);
             this.namelabel.Name = "namelabel";
             this.namelabel.Size = new System.Drawing.Size(225, 46);
             this.namelabel.TabIndex = 1;
@@ -257,7 +244,6 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,7 +254,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label namelabel;
         private System.Windows.Forms.Label closeButton;
         private System.Windows.Forms.Label label1;
