@@ -39,8 +39,8 @@
             this.pn_user = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.screengame = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnstart = new Guna.UI2.WinForms.Guna2Button();
             this.btnNext = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.pn_user.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.screengame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnPrev)).BeginInit();
@@ -70,7 +70,7 @@
             this.pn_side_dashboard.Location = new System.Drawing.Point(0, 0);
             this.pn_side_dashboard.Margin = new System.Windows.Forms.Padding(4);
             this.pn_side_dashboard.Name = "pn_side_dashboard";
-            this.pn_side_dashboard.Size = new System.Drawing.Size(367, 726);
+            this.pn_side_dashboard.Size = new System.Drawing.Size(367, 795);
             this.pn_side_dashboard.TabIndex = 1;
             // 
             // guna2Panel1
@@ -234,41 +234,40 @@
             this.label1.Size = new System.Drawing.Size(0, 34);
             this.label1.TabIndex = 1;
             // 
-            // guna2PictureBox2
+            // screengame
             // 
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(511, 192);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(760, 408);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 2;
-            this.guna2PictureBox2.TabStop = false;
+            this.screengame.ImageRotate = 0F;
+            this.screengame.Location = new System.Drawing.Point(508, 192);
+            this.screengame.Name = "screengame";
+            this.screengame.Size = new System.Drawing.Size(760, 506);
+            this.screengame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.screengame.TabIndex = 2;
+            this.screengame.TabStop = false;
             // 
-            // guna2Button7
+            // btnstart
             // 
-            this.guna2Button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2Button7.Animated = true;
-            this.guna2Button7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button7.BorderRadius = 10;
-            this.guna2Button7.BorderThickness = 1;
-            this.guna2Button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.guna2Button7.Font = new System.Drawing.Font("Lucida Sans Unicode", 8F, System.Drawing.FontStyle.Bold);
-            this.guna2Button7.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.Location = new System.Drawing.Point(1131, 511);
-            this.guna2Button7.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.ShadowDecoration.BorderRadius = 0;
-            this.guna2Button7.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.guna2Button7.Size = new System.Drawing.Size(119, 58);
-            this.guna2Button7.TabIndex = 3;
-            this.guna2Button7.Text = "Start Game";
-            this.guna2Button7.UseTransparentBackground = true;
+            this.btnstart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnstart.Animated = true;
+            this.btnstart.BackColor = System.Drawing.Color.Transparent;
+            this.btnstart.BorderRadius = 10;
+            this.btnstart.BorderThickness = 1;
+            this.btnstart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnstart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnstart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnstart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnstart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnstart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnstart.Font = new System.Drawing.Font("Lucida Sans Unicode", 8F, System.Drawing.FontStyle.Bold);
+            this.btnstart.ForeColor = System.Drawing.Color.White;
+            this.btnstart.Location = new System.Drawing.Point(1114, 614);
+            this.btnstart.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.btnstart.Name = "btnstart";
+            this.btnstart.ShadowDecoration.BorderRadius = 0;
+            this.btnstart.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btnstart.Size = new System.Drawing.Size(122, 58);
+            this.btnstart.TabIndex = 3;
+            this.btnstart.Text = "Start Game";
+            this.btnstart.UseTransparentBackground = true;
             // 
             // btnNext
             // 
@@ -276,7 +275,7 @@
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageRotate = 0F;
-            this.btnNext.Location = new System.Drawing.Point(416, 376);
+            this.btnNext.Location = new System.Drawing.Point(404, 424);
             this.btnNext.Margin = new System.Windows.Forms.Padding(0, 197, 0, 197);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(63, 54);
@@ -336,7 +335,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(759, 643);
+            this.label4.Location = new System.Drawing.Point(742, 731);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(296, 19);
             this.label4.TabIndex = 1;
@@ -348,7 +347,7 @@
             this.btnPrev.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrev.Image = ((System.Drawing.Image)(resources.GetObject("btnPrev.Image")));
             this.btnPrev.ImageRotate = 0F;
-            this.btnPrev.Location = new System.Drawing.Point(1303, 376);
+            this.btnPrev.Location = new System.Drawing.Point(1314, 424);
             this.btnPrev.Margin = new System.Windows.Forms.Padding(0, 197, 0, 197);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(63, 54);
@@ -363,13 +362,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            this.ClientSize = new System.Drawing.Size(1409, 726);
+            this.ClientSize = new System.Drawing.Size(1412, 795);
             this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.guna2Button7);
-            this.Controls.Add(this.guna2PictureBox2);
+            this.Controls.Add(this.btnstart);
+            this.Controls.Add(this.screengame);
             this.Controls.Add(this.pn_side_dashboard);
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -383,7 +382,7 @@
             this.guna2Panel5.ResumeLayout(false);
             this.pn_user.ResumeLayout(false);
             this.pn_user.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.screengame)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -403,8 +402,8 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Panel pn_user;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private Guna.UI2.WinForms.Guna2PictureBox screengame;
+        private Guna.UI2.WinForms.Guna2Button btnstart;
         private Guna.UI2.WinForms.Guna2PictureBox btnNext;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace just_pl
@@ -17,7 +18,14 @@ namespace just_pl
         public Launcher()
         {
             InitializeComponent();
-            
+            images = new Image[]
+            {
+                Image.FromFile(@"C:\Users\vladb\Downloads\flappy-bird1.jpg"),
+                Image.FromFile(@"C:\Users\vladb\Downloads\snak.png"),
+                Image.FromFile(@"C:\Users\vladb\Downloads\ches.png"),
+                Image.FromFile(@"C:\Users\vladb\Downloads\header.png")
+            };
+            screengame.Image = images[currentPage];
             
         }
         private void label2_Click(object sender, EventArgs e)
@@ -49,13 +57,15 @@ namespace just_pl
             label1.Text = Login;
         }
         private int currentPage = 0;
-        private int maxPages = 12;
+        private int maxPages = 4;
+        private Image[] images;
 
         private void btnNext_Click(object sender, EventArgs e)
         {
             if (currentPage < maxPages - 1) 
             {
                 currentPage++;
+                screengame.Image = images[currentPage]; 
             }
             btnPrev.Visible = true;
             
@@ -63,6 +73,7 @@ namespace just_pl
             {
                 btnNext.Visible = false;    
             }
+            UpdateButton();
         }
 
         private void btnPrev_Click(object sender, EventArgs e)
@@ -70,6 +81,8 @@ namespace just_pl
             if (currentPage > 0)
             {
                 currentPage--;
+                screengame.Image = images[currentPage];
+                btnNext.Visible = true;
                 
             }
 
@@ -80,7 +93,14 @@ namespace just_pl
             {
                 btnPrev.Visible = false;
             }
+            UpdateButton();
         }
+        private void UpdateButton()
+        {
+            
+        }
+
+        
     }
     
 }
