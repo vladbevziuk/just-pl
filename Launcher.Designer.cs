@@ -236,6 +236,7 @@
             // 
             // screengame
             // 
+            this.screengame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.screengame.ImageRotate = 0F;
             this.screengame.Location = new System.Drawing.Point(508, 192);
             this.screengame.Name = "screengame";
@@ -259,15 +260,16 @@
             this.btnstart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.btnstart.Font = new System.Drawing.Font("Lucida Sans Unicode", 8F, System.Drawing.FontStyle.Bold);
             this.btnstart.ForeColor = System.Drawing.Color.White;
-            this.btnstart.Location = new System.Drawing.Point(1114, 614);
+            this.btnstart.Location = new System.Drawing.Point(1093, 604);
             this.btnstart.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.btnstart.Name = "btnstart";
             this.btnstart.ShadowDecoration.BorderRadius = 0;
             this.btnstart.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.btnstart.Size = new System.Drawing.Size(122, 58);
+            this.btnstart.Size = new System.Drawing.Size(143, 68);
             this.btnstart.TabIndex = 3;
             this.btnstart.Text = "Start Game";
             this.btnstart.UseTransparentBackground = true;
+            this.btnstart.Click += new System.EventHandler(this.btnstart_Click);
             // 
             // btnNext
             // 
@@ -318,6 +320,8 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "x";
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.MouseEnter += new System.EventHandler(this.label2_MouseEnter);
+            this.label2.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
             // 
             // namelabel
             // 

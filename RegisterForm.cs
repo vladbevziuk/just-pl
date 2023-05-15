@@ -69,7 +69,8 @@ namespace just_pl
             if (command.ExecuteNonQuery() == 1)
             {
                 this.Hide();
-                Launcher launcher = new Launcher(); 
+                Launcher launcher = new Launcher();
+                launcher.Login = logintext.Text;
                 launcher.Show();
             }
             else
