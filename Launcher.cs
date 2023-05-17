@@ -22,14 +22,13 @@ namespace just_pl
             InitializeComponent();
             images = new Image[]
             {
-                Image.FromFile(@"C:\Users\vladb\Downloads\flp_brd.png"),
-                Image.FromFile(@"C:\Users\vladb\Downloads\snk.png"),
-                Image.FromFile(@"C:\Users\vladb\Downloads\ch.png"),
-                Image.FromFile(@"C:\Users\vladb\Downloads\zmb.png"),
-                Image.FromFile(@"C:\Users\vladb\Downloads\act.png"),
-                Image.FromFile(@"C:\Users\vladb\Downloads\arcanoid.png"),
-                Image.FromFile(@"C:\Users\vladb\Downloads\carRac.png"),
-                Image.FromFile(@"C:\Users\vladb\Downloads\ct.png"),
+                Image.FromFile(@"C:\Users\vladb\Downloads\flp_brd.png"), 
+                Image.FromFile(@"C:\Users\vladb\Downloads\snk.png"), 
+                Image.FromFile(@"C:\Users\vladb\Downloads\zmb.png"), 
+                Image.FromFile(@"C:\Users\vladb\Downloads\act.png"), 
+                Image.FromFile(@"C:\Users\vladb\Downloads\carRac.png"), 
+                Image.FromFile(@"C:\Users\vladb\Downloads\ct.png"), 
+                Image.FromFile(@"C:\Users\vladb\Downloads\fjs.png"),
                 Image.FromFile(@"C:\Users\vladb\Downloads\helc.png"),
                 Image.FromFile(@"C:\Users\vladb\Downloads\rps.png"),
                 Image.FromFile(@"C:\Users\vladb\Downloads\trex.png")
@@ -65,7 +64,7 @@ namespace just_pl
             label1.Text = Login;
         }
         private int currentPage = 0;
-        private int maxPages = 11;
+        private int maxPages = 9;
         private Image[] images;
         private void btnNext_Click(object sender, EventArgs e)
         {
@@ -105,37 +104,31 @@ namespace just_pl
             switch (currentPage)
             {
                 case 0:
-                    Process.Start(@"FlappyBird\Flappy Bird Windows Form");
+                    Process.Start(@"FlappyBird\Flappy Bird Windows Form"); 
                     break;
                 case 1:
-                    Process.Start(@"Snake\Snake.exe");
-                    break;
-                case 2:
-                    Process.Start(@"ChessGame\Chess");
+                    Process.Start(@"Snake\Snake.exe"); 
                     break;
                 case 3:
-                    Process.Start(@"ZombieShooter\Shoot Out Game MOO ICT");
+                    Process.Start(@"ZombieShooter\Shoot Out Game MOO ICT"); 
                     break;
                 case 4:
-                    Process.Start(@"ActionGame\Side Scrolling Game MOO ICT");
-                    break;
-                case 5:
-                    Process.Start(@"Arcanoid\Arcanoid");
+                    Process.Start(@"ActionGame\Side Scrolling Game MOO ICT"); 
                     break;
                 case 6:
-                    Process.Start(@"CarRacing\Car Racing Game MOO ICT");
+                    Process.Start(@"CarRacing\Car Racing Game MOO ICT"); 
                     break;
                 case 7:
-                    Process.Start(@"CityDefense\CityDefense");
+                    Process.Start(@"CityDefense\CityDefense"); 
                     break;
                 case 8:
-                    Process.Start(@"Fighter Jet Shooting\Fighter Jey Shooting Game MOO ICT");
+                    Process.Start(@"Fighter Jet Shooting\Fighter Jet Shooting Game MOO ICT");
                 break;
                 case 9:
                     Process.Start(@"Helicopter Shooter\Helicopter Shooter Game MOO ICT");
                     break;
                 case 10:
-                    Process.Start(@"Rock Paper Scissors");
+                    Process.Start(@"Rock Paper Scissors\rock");
                     break;
                 case 11:
                     Process.Start(@"TRex Runner\T Rex Endless Runner MOO ICT");
