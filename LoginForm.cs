@@ -84,5 +84,9 @@ namespace just_pl
             registerForm.Show();
         }
 
+        private void loginbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.buttonlogin = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.registerLabel = new System.Windows.Forms.Label();
@@ -55,30 +53,6 @@
             this.label1.Size = new System.Drawing.Size(199, 55);
             this.label1.TabIndex = 1;
             this.label1.Text = "SIGN IN  ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(437, 264);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 36);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Account name";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(437, 398);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 32);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Password";
             // 
             // buttonlogin
             // 
@@ -175,8 +149,9 @@
             // 
             // loginbox
             // 
-            this.loginbox.BackColor = System.Drawing.SystemColors.Desktop;
+            this.loginbox.BackColor = System.Drawing.Color.Transparent;
             this.loginbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.loginbox.BorderRadius = 20;
             this.loginbox.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.loginbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.loginbox.DefaultText = "";
@@ -186,22 +161,25 @@
             this.loginbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.loginbox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.loginbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.loginbox.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.loginbox.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.loginbox.ForeColor = System.Drawing.Color.White;
             this.loginbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.loginbox.Location = new System.Drawing.Point(443, 324);
+            this.loginbox.Location = new System.Drawing.Point(443, 305);
             this.loginbox.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
             this.loginbox.Name = "loginbox";
             this.loginbox.PasswordChar = '\0';
-            this.loginbox.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.loginbox.PlaceholderText = "";
+            this.loginbox.PlaceholderForeColor = System.Drawing.SystemColors.Highlight;
+            this.loginbox.PlaceholderText = "Account name ";
             this.loginbox.SelectedText = "";
             this.loginbox.Size = new System.Drawing.Size(297, 48);
             this.loginbox.TabIndex = 11;
+            this.loginbox.TextChanged += new System.EventHandler(this.loginbox_TextChanged);
             // 
             // passbox
             // 
+            this.passbox.BackColor = System.Drawing.Color.Transparent;
             this.passbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.passbox.BorderRadius = 20;
             this.passbox.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.passbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.passbox.DefaultText = "";
@@ -214,11 +192,11 @@
             this.passbox.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.passbox.ForeColor = System.Drawing.Color.White;
             this.passbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.passbox.Location = new System.Drawing.Point(443, 452);
+            this.passbox.Location = new System.Drawing.Point(443, 419);
             this.passbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.passbox.Name = "passbox";
             this.passbox.PasswordChar = '●';
-            this.passbox.PlaceholderText = "";
+            this.passbox.PlaceholderText = "Password";
             this.passbox.SelectedText = "";
             this.passbox.Size = new System.Drawing.Size(297, 48);
             this.passbox.TabIndex = 12;
@@ -236,8 +214,6 @@
             this.Controls.Add(this.registerLabel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonlogin);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
@@ -252,8 +228,6 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonlogin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label registerLabel;
