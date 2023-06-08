@@ -35,12 +35,10 @@
             this.namelabel = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.buttonregister = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.logintext = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.butonnregister = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -116,46 +114,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "SIGN UP";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(437, 264);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 32);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Account name";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label3.Location = new System.Drawing.Point(437, 398);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 32);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Password";
-            // 
-            // buttonregister
-            // 
-            this.buttonregister.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.buttonregister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonregister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonregister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonregister.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonregister.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonregister.Location = new System.Drawing.Point(497, 574);
-            this.buttonregister.Name = "buttonregister";
-            this.buttonregister.Size = new System.Drawing.Size(189, 62);
-            this.buttonregister.TabIndex = 11;
-            this.buttonregister.Text = "Register";
-            this.buttonregister.UseVisualStyleBackColor = false;
-            this.buttonregister.Click += new System.EventHandler(this.buttonregister_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -163,7 +121,7 @@
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(566, 772);
+            this.label4.Location = new System.Drawing.Point(563, 726);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 25);
             this.label4.TabIndex = 13;
@@ -172,8 +130,9 @@
             // 
             // logintext
             // 
-            this.logintext.BackColor = System.Drawing.SystemColors.Desktop;
+            this.logintext.BackColor = System.Drawing.Color.Transparent;
             this.logintext.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.logintext.BorderRadius = 20;
             this.logintext.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.logintext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.logintext.DefaultText = "";
@@ -183,23 +142,24 @@
             this.logintext.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.logintext.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.logintext.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.logintext.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.logintext.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.logintext.ForeColor = System.Drawing.Color.White;
             this.logintext.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.logintext.Location = new System.Drawing.Point(443, 328);
+            this.logintext.Location = new System.Drawing.Point(443, 292);
             this.logintext.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
             this.logintext.Name = "logintext";
             this.logintext.PasswordChar = '\0';
-            this.logintext.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.logintext.PlaceholderText = "";
+            this.logintext.PlaceholderForeColor = System.Drawing.SystemColors.Highlight;
+            this.logintext.PlaceholderText = "Account name";
             this.logintext.SelectedText = "";
             this.logintext.Size = new System.Drawing.Size(297, 48);
             this.logintext.TabIndex = 14;
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.textBox1.BackColor = System.Drawing.Color.Transparent;
             this.textBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.textBox1.BorderRadius = 20;
             this.textBox1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBox1.DefaultText = "";
@@ -209,19 +169,37 @@
             this.textBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.textBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.textBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox1.Location = new System.Drawing.Point(443, 449);
+            this.textBox1.Location = new System.Drawing.Point(443, 402);
             this.textBox1.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '●';
-            this.textBox1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.textBox1.PlaceholderText = "";
+            this.textBox1.PlaceholderForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBox1.PlaceholderText = "Password";
             this.textBox1.SelectedText = "";
             this.textBox1.Size = new System.Drawing.Size(297, 48);
             this.textBox1.TabIndex = 15;
             this.textBox1.UseSystemPasswordChar = true;
+            // 
+            // butonnregister
+            // 
+            this.butonnregister.BackColor = System.Drawing.Color.Transparent;
+            this.butonnregister.BorderColor = System.Drawing.Color.Transparent;
+            this.butonnregister.BorderRadius = 20;
+            this.butonnregister.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butonnregister.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butonnregister.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butonnregister.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butonnregister.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.butonnregister.ForeColor = System.Drawing.Color.White;
+            this.butonnregister.Location = new System.Drawing.Point(515, 523);
+            this.butonnregister.Name = "butonnregister";
+            this.butonnregister.Size = new System.Drawing.Size(177, 62);
+            this.butonnregister.TabIndex = 16;
+            this.butonnregister.Text = "Register";
+            this.butonnregister.Click += new System.EventHandler(this.butonnregister_Click);
             // 
             // RegisterForm
             // 
@@ -229,12 +207,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1247, 902);
+            this.Controls.Add(this.butonnregister);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.logintext);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.buttonregister);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -257,11 +233,9 @@
         private System.Windows.Forms.Label namelabel;
         private System.Windows.Forms.Label closeButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button buttonregister;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox logintext;
         private Guna.UI2.WinForms.Guna2TextBox textBox1;
+        private Guna.UI2.WinForms.Guna2Button butonnregister;
     }
 }

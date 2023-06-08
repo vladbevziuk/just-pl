@@ -34,7 +34,30 @@ namespace just_pl
             this.Location = new Point(x, y);
         }
 
-        private void buttonlogin_Click(object sender, EventArgs e)
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void registerLabel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.Show();
+        }
+
+        private void loginbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonlogin_Click_1(object sender, EventArgs e)
         {
             string login = loginbox.Text;
             string pass = passbox.Text;
@@ -65,28 +88,6 @@ namespace just_pl
                 loginbox.BorderColor = Color.Red;
                 passbox.BorderColor = Color.Red;
             }
-        }
-
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void registerLabel_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            RegisterForm registerForm = new RegisterForm();
-            registerForm.Show();
-        }
-
-        private void loginbox_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

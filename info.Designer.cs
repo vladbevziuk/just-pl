@@ -64,9 +64,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label2.Location = new System.Drawing.Point(64, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(422, 22);
+            this.label2.Size = new System.Drawing.Size(412, 22);
             this.label2.TabIndex = 1;
-            this.label2.Text = "An game launcher is a program that allows players ";
+            this.label2.Text = "A game launcher is a program that allows players ";
             // 
             // label3
             // 

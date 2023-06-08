@@ -41,46 +41,6 @@ namespace just_pl
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void buttonregister_Click(object sender, EventArgs e)
-        {
-            if (logintext.Text == "")
-            {
-                logintext.BorderColor = Color.Red;
-                return;
-            }
-            if(textBox1.Text == "")
-            {
-                textBox1.BorderColor = Color.Red;
-                return;
-            }
-
-            if (checkUSer())
-                return;
-
-        
-            Db db = new Db();
-            MySqlCommand command = new MySqlCommand("Insert INTO users (login, password) VALUES (@login, @pass)", db.getConnection());
-
-            command.Parameters.Add("@login", MySqlDbType.VarChar).Value = logintext.Text;
-            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = textBox1.Text;
-
-            db.openConnection();
-
-            if (command.ExecuteNonQuery() == 1)
-            {
-                this.Hide();
-                Launcher launcher = new Launcher();
-                launcher.Login = logintext.Text;
-                launcher.Show();
-            }
-            else
-                MessageBox.Show("No account");
-
-
-
-            db.closeConnection();
-        }
-
         public Boolean checkUSer()
         {
             Db db = new Db();
@@ -110,6 +70,46 @@ namespace just_pl
             this.Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
+        }
+
+        private void butonnregister_Click(object sender, EventArgs e)
+        {
+            if (logintext.Text == "")
+            {
+                logintext.BorderColor = Color.Red;
+                return;
+            }
+            if (textBox1.Text == "")
+            {
+                textBox1.BorderColor = Color.Red;
+                return;
+            }
+
+            if (checkUSer())
+                return;
+
+
+            Db db = new Db();
+            MySqlCommand command = new MySqlCommand("Insert INTO users (login, password) VALUES (@login, @pass)", db.getConnection());
+
+            command.Parameters.Add("@login", MySqlDbType.VarChar).Value = logintext.Text;
+            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = textBox1.Text;
+
+            db.openConnection();
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                this.Hide();
+                Launcher launcher = new Launcher();
+                launcher.Login = logintext.Text;
+                launcher.Show();
+            }
+            else
+                MessageBox.Show("No account");
+
+
+
+            db.closeConnection();
         }
     }
 }

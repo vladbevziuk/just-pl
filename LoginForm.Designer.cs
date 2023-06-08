@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonlogin = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.registerLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -39,6 +38,7 @@
             this.closeButton = new System.Windows.Forms.Label();
             this.loginbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.passbox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.buttonlogin = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,22 +53,6 @@
             this.label1.Size = new System.Drawing.Size(199, 55);
             this.label1.TabIndex = 1;
             this.label1.Text = "SIGN IN  ";
-            // 
-            // buttonlogin
-            // 
-            this.buttonlogin.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.buttonlogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonlogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonlogin.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonlogin.Location = new System.Drawing.Point(499, 601);
-            this.buttonlogin.Name = "buttonlogin";
-            this.buttonlogin.Size = new System.Drawing.Size(189, 62);
-            this.buttonlogin.TabIndex = 6;
-            this.buttonlogin.Text = "Continue";
-            this.buttonlogin.UseVisualStyleBackColor = false;
-            this.buttonlogin.Click += new System.EventHandler(this.buttonlogin_Click);
             // 
             // label4
             // 
@@ -202,18 +186,36 @@
             this.passbox.TabIndex = 12;
             this.passbox.UseSystemPasswordChar = true;
             // 
+            // buttonlogin
+            // 
+            this.buttonlogin.BackColor = System.Drawing.Color.Transparent;
+            this.buttonlogin.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonlogin.BorderRadius = 20;
+            this.buttonlogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonlogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonlogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonlogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonlogin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonlogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonlogin.Location = new System.Drawing.Point(503, 540);
+            this.buttonlogin.Name = "buttonlogin";
+            this.buttonlogin.Size = new System.Drawing.Size(182, 62);
+            this.buttonlogin.TabIndex = 13;
+            this.buttonlogin.Text = "Continue";
+            this.buttonlogin.Click += new System.EventHandler(this.buttonlogin_Click_1);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1247, 902);
+            this.Controls.Add(this.buttonlogin);
             this.Controls.Add(this.passbox);
             this.Controls.Add(this.loginbox);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.registerLabel);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.buttonlogin);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
@@ -228,7 +230,6 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonlogin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label registerLabel;
         private System.Windows.Forms.Panel panel2;
@@ -237,6 +238,7 @@
         private System.Windows.Forms.Label closeButton;
         private Guna.UI2.WinForms.Guna2TextBox loginbox;
         private Guna.UI2.WinForms.Guna2TextBox passbox;
+        private Guna.UI2.WinForms.Guna2Button buttonlogin;
     }
 }
 

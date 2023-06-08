@@ -253,7 +253,7 @@
             this.btnstart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnstart.Animated = true;
             this.btnstart.BackColor = System.Drawing.Color.Transparent;
-            this.btnstart.BorderRadius = 30;
+            this.btnstart.BorderRadius = 20;
             this.btnstart.BorderThickness = 1;
             this.btnstart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnstart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -263,7 +263,7 @@
             this.btnstart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.btnstart.Font = new System.Drawing.Font("Lucida Sans Unicode", 8F, System.Drawing.FontStyle.Bold);
             this.btnstart.ForeColor = System.Drawing.Color.White;
-            this.btnstart.Location = new System.Drawing.Point(1105, 608);
+            this.btnstart.Location = new System.Drawing.Point(599, 407);
             this.btnstart.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.btnstart.Name = "btnstart";
             this.btnstart.ShadowDecoration.BorderRadius = 0;
@@ -369,6 +369,7 @@
             this.guna2Panel3.BorderColor = System.Drawing.Color.White;
             this.guna2Panel3.BorderRadius = 30;
             this.guna2Panel3.BorderThickness = 1;
+            this.guna2Panel3.Controls.Add(this.btnstart);
             this.guna2Panel3.Controls.Add(this.screengame);
             this.guna2Panel3.CustomBorderColor = System.Drawing.Color.White;
             this.guna2Panel3.Location = new System.Drawing.Point(494, 184);
@@ -382,7 +383,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(1412, 795);
-            this.Controls.Add(this.btnstart);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.label4);
